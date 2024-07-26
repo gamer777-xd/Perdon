@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 900px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #ff6347;
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.message {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s forwards;
+}
+
+.message:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.message:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.message h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #4682b4;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+.message p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: #333;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+}
+
+.message p:nth-child(2) {
+    animation-delay: 2s;
+}
+
+.message p:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.message p:nth-child(4) {
+    animation-delay: 4s;
+}
+
+.message p:nth-child(5) {
+    animation-delay: 5s;
+}
+
+.message p:nth-child(6) {
+    animation-delay: 6s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
